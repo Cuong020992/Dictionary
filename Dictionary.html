@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<form>
+    <input type="text" id="txt" placeholder="nhập từ cần tìm" size="30"><br>
+    <textarea id="result" ></textarea><br><br>
+    <input type="button" onclick="abc()" value="TRANSLATE" size="10">
+
+
+</form>
+</body>
+</html>
+
+<script>
+
+
+
+function abc() {
+    let english = ['i','go','to','school','by','bus'];
+    let vietnamese = ['tôi','đi','đến','trường','bằng','xe bus'];
+    let print = '';
+    let input = document.getElementById("txt").value;
+    trunggian = english.indexOf(input);
+    if (trunggian !== -1) {
+        print = vietnamese[trunggian];
+    } else {
+        alert("không tìm thấy từ cần tìm")
+    }
+    document.getElementById("result").innerHTML = print;
+}
+
+
+
+
+
+
+
+
+
+
+</script>
